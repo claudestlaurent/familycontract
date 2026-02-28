@@ -1,5 +1,8 @@
 import { useState } from "react";
-import logo from "./assets/logo.png";
+import logo from "./assets/logo_contract.png";
+// test comment
+
+
 
 // Which 2 players play each round (cycle through 6 pairs so everyone plays evenly)
 const PAIRS = [[0, 1], [2, 3], [0, 2], [1, 3], [0, 3], [1, 2]];
