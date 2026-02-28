@@ -1,4 +1,5 @@
 import { useState } from "react";
+import logo from "./assets/logo.png";
 
 // Which 2 players play each round (cycle through 6 pairs so everyone plays evenly)
 const PAIRS = [[0, 1], [2, 3], [0, 2], [1, 3], [0, 3], [1, 2]];
@@ -218,17 +219,19 @@ export default function App() {
   };
 
   // ---------- SETUP SCREEN ----------
+
   if (!setupDone) {
     const roundsValue = Math.max(1, Math.min(3, parseInt(roundsPerPair, 10) || 3));
     return (
       <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-amber-50 flex items-center justify-center p-4">
         <div className="bg-white/90 backdrop-blur-sm p-8 rounded-3xl shadow-xl shadow-indigo-100/50 border border-indigo-100/80 space-y-6 w-full max-w-md">
           <div className="text-center space-y-1">
-            <h1 className="text-3xl font-bold text-indigo-700">
-              Family Contract
-            </h1>
+          
+
+          <img src={logo} alt="Logo" className="h-80 drop-shadow-xl mx-auto" />
             <p className="text-slate-500 text-sm">
-              Cooperate for bigger rewards—but defecting pays if others don&apos;t.
+              Cooperate for bigger rewards—
+              but defecting pays if the other doesn't
             </p>
           </div>
 
